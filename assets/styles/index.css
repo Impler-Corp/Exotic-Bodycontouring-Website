@@ -1,4 +1,5 @@
-nav {
+.lg-nav {
+    font-family: 'Pacifico', cursive;
     width: 100%;
     height: 8rem;
     display: flex;
@@ -7,7 +8,15 @@ nav {
     padding-inline: 4rem;
     /* box-shadow: 0 22px 32px; */
     /* box-shadow: #3D240710 0px 4px 6px -1px, #3D240708 0px 2px 4px -1px; */
+
 }
+
+@media only screen and (max-width: 600px) {
+    .lg-nav {
+        display: none;
+    }
+}
+
 
 .links {
     display: flex;
@@ -16,9 +25,56 @@ nav {
 }
 
 .logo {
-    font-family: 'Pacifico', cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.sm-nav {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .sm-nav {
+        font-family: 'Pacifico', cursive;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 2rem;
+    }
+
+    .logo {
+        align-items: flex-start;
+    }
+
+    .menu-btn {
+        font-size: 2rem;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .btn-close__menu {
+        position: absolute;
+        top: 2%;
+        right: 8%;
+        z-index: 10;
+    }
+
+    .links {
+        position: absolute;
+        background-color: #FFFAEE;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out;
+    }
 }
