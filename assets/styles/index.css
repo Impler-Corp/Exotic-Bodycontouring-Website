@@ -1,5 +1,5 @@
 .lg-nav {
-    font-family: 'Pacifico', cursive;
+    font-family: var(--primary-font);
     width: 100%;
     height: 8rem;
     display: flex;
@@ -37,7 +37,7 @@
 
 @media only screen and (max-width: 600px) {
     .sm-nav {
-        font-family: 'Pacifico', cursive;
+        font-family: var(--primary-font);
         position: relative;
         display: flex;
         justify-content: space-between;
