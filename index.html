@@ -20,6 +20,9 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Boxicon Cdn -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Style Sheet -->
     <link rel="stylesheet" href="assets/styles/global.css">
     <link rel="stylesheet" href="assets/styles/index.css">
@@ -38,9 +41,8 @@
                 <li><a href="#services">Services</a></li>
             </ul>
         </nav>
-        <a class="logo" href="#">
-            <h1>Exotic</h1>
-            <span>Body Contouring</span>
+        <a href="#">
+            <h1 class="logo">Exotic<span>Body Contouring</span> </h1>
         </a>
         <nav class="secondary-nav">
             <ul class="nav__links">
@@ -55,6 +57,14 @@
         <!-- Home Section -->
 
         <section id="home" class="home">
+
+            <!-- Particle images -->
+            <img class="particle particle-1" src="./assets/images/particle-1.svg" alt="particle 1">
+            <img class="particle particle-2" src="./assets/images/particle-2.svg" alt="particle 2">
+            <img class="particle particle-3" src="./assets/images/particle-3.svg" alt="particle 3">
+            <img class="particle particle-4" src="./assets/images/particle-4.svg" alt="particle 4">
+            <img class="particle particle-5" src="./assets/images/particle-5.svg" alt="particle 5">
+
             <!-- Space for Images -->
             <div class="content">
                 <h1>Start tuning yout body without any suspicion.</h1>
@@ -64,7 +74,8 @@
                     Phasellus
                     non cursus in sed commodo</p>
 
-                <a href="#"><button class="btn">Book Now</button></a>
+                <a href="#"><button class="btn">Book Now <i style="margin-left: 2px;"
+                            class="fa-solid fa-circle-arrow-right"></i></button></a>
             </div>
 
             <div class="hero-img">
@@ -113,13 +124,13 @@
                     </ul>
                 </div>
                 <div class="card service__card">
-                    <img src="./assets/images/service-1.jpg" alt="service-1">
+                    <img src="./assets/images/service-2.png" alt="service-1">
                     <ul>
-                        <li>Low Level Light Therapy</li>
-                        <li>Wood Therapy</li>
-                        <li>Vaccum Therapy</li>
-                        <li>Osmotic Wrap With Slimming Cream</li>
-                        <li>WholeBody Vibration Plate</li>
+                        <li>Ultrasonic Fat Cavitation</li>
+                        <li>Radio Frequency</li>
+                        <li>Columbian Butt Lift</li>
+                        <li>Chin Tightening</li>
+                        <li>Infra Red Sauna Blanket</li>
                     </ul>
                 </div>
             </div>
@@ -137,37 +148,46 @@
                     </div>
                     <h4 class="cost">$735</h4>
                     <ul class="items">
-                        <li>Exotic stomatch / Abdomen</li>
-                        <li>Exotic Back / Bra Fat</li>
-                        <li>Exotic Columbian Butt Lift</li>
-                        <li>Exotic Wood Therapy 1 Area</li>
-                        <li>Exotic Double Chin</li>
-                        <li>Exotic Sauna Detoxification with Osmotic Wrap & Slimming Cream</li>
-                        <li>Exotic Whole Body Vibration Therapy</li>
+                        <li>Exotic stomatch / Abdomen - 75mins-</li>
+                        <li>Exotic Back / Bra Fat - 75 min</li>
+                        <li>Exotic Columbian Butt Lift - 75min</li>
+                        <li>Exotic Wood Therapy 1 Area - 60min</li>
+                        <li>Exotic Double Chin - 30min</li>
+                        <li>Exotic Sauna Detoxification with Osmotic Wrap & Slimming Cream - 30min</li>
+                        <li>Exotic Whole Body Vibration Therapy - 20min</li>
                     </ul>
-                    <a class="btn-action">
-                        Book Now
+                    <a href="#" class="btn-action">
+                        Book Now <i style="margin-left: 2px;" class="fa-solid fa-circle-arrow-right"></i>
                     </a>
                 </div>
                 <div class="card pricing__card">
                     <div class="top">
                         <img src="./assets/images/package.svg" alt="physiotherapy treatment">
-                        <h3>Single Session</h3>
+                        <h3>Package of 3 Session</h3>
                     </div>
-                    <h4 class="cost">$735</h4>
+                    <h4 class="cost">$1880</h4>
                     <ul class="items">
-                        <li>Exotic stomatch / Abdomen</li>
-                        <li>Exotic Back / Bra Fat</li>
-                        <li>Exotic Columbian Butt Lift</li>
-                        <li>Exotic Wood Therapy 1 Area</li>
-                        <li>Exotic Double Chin</li>
-                        <li>Exotic Sauna Detoxification with Osmotic Wrap & Slimming Cream</li>
-                        <li>Exotic Whole Body Vibration Therapy</li>
+                        <li>Exotic stomatch / Abdomen - 75min</li>
+                        <li>Exotic Back / Bra Fat - 75min</li>
+                        <li>Exotic Arms/Thighs - 75min</li>
+                        <li>Exotic Columbian Butt Lift - 60min</li>
+                        <li>Exotic Wood Therapy 1 Area - 35min</li>
+                        <li>Exotic Double Chin - 35min</li>
+                        <li>Exotic Sauna Detoxification with Osmotic Wrap & Slimming Cream - 30min</li>
+                        <li>Exotic Whole Body Vibration Therapy - 20min</li>
                     </ul>
-                    <a class="btn-action">
-                        Book Now
+                    <a href="#" class="btn-action">
+                        Book Now <i style="margin-left: 2px;" class="fa-solid fa-circle-arrow-right"></i>
                     </a>
                 </div>
+            </div>
+
+            <div class="pricing-container">
+                <p class="pricing-text">Recommended Number of sessions is 6 to 8 Depending on the Body Type,
+                    <br> This is a
+                    Non-Invasive Client
+                    and Specialist Should Work Together to Reach Their Goal.
+                </p>
             </div>
         </section>
 
@@ -177,23 +197,58 @@
             <form action="#">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" placeholder="Your name here. eg:John Doe">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" placeholder="Your email here. eg:Johndoe@gmail.com">
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea name="messafe" id="message" rows="8"></textarea>
+                    <textarea name="messafe" id="message" rows="8" placeholder="Write your Query here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="button" value="Send Message">
                 </div>
             </form>
         </section>
-
-        <!-- FAQ Section -->
-
-        <!-- Footer Section -->
     </main>
+
+    <!-- FAQ Section -->
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="row-1">
+            <div class="address">
+                <img src="./assets/images/about-img.png" alt="logo">
+            </div>
+            <div class="social-media">
+                <h1>Let's Get Social</h1>
+                <div class="media-links">
+                    <a href="#"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="app-contact">
+                <h1>Appointments</h1>
+                <p>(780)246-7630</p>
+                <p>exotic@bodysculpting.info</p>
+            </div>
+        </div>
+        <div class="row-2">
+            <div class="policy">
+                <a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a>
+            </div>
+            <div class="copy">
+                <p>Copyright@2022 | All Rights Reserved
+            </div>
+            <div class="promotion">
+                <p>Designed by <a href="#">EuTact.com</a></p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
