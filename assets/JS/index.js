@@ -19,3 +19,18 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// Nav
+const navItems = document.querySelector(".navigation_links")
+const navLinks = document.querySelectorAll(".nav-link")
+const btnChecked = document.querySelector(".checkbtn")
+
+btnChecked.addEventListener("click", () => {
+  navItems.classList.toggle("toggleMenu")
+})
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navItems.classList.toggle("toggleMenu")
+  })
+})

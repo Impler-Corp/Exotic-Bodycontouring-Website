@@ -80,7 +80,7 @@ nav ul li a{
     .checkbtn{
         display: block;
     }
-    ul{
+    nav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -96,7 +96,9 @@ nav ul li a{
     nav ul li a{
         font-size: 20px;
     }
-    #check:checked ~ ul{
+    /* #check:checked ~ ul{
+    } */
+    .toggleMenu{
         left: 0;
     }
 }
@@ -107,7 +109,7 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .logo span {
@@ -148,6 +150,7 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    padding-inline: 4rem;
 }
 
 .particle {
@@ -300,7 +303,7 @@ section {
 
 .pricing-container {
     display: flex;
-    width: 70%;
+    max-width: 70%;
     justify-content: center;
     -webkit-box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
     -moz-box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
@@ -309,9 +312,20 @@ section {
 }
 
 .pricing-text {
-    padding: 3rem 5rem;
+    padding: 2rem 3rem;
     font-weight: 600;
     text-align: justify;
+}
+
+@media only screen and (max-width: 729px) {
+    .pricing-container{
+        max-width: 90%;
+    }
+    
+    .pricing-text{
+        /* font-weight: 500; */
+        padding: 1rem 2rem;
+    }
 }
 
 /* Contact */
