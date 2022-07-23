@@ -199,7 +199,7 @@ section {
     }
 
     .home .hero-img {
-        max-width: 50%;
+        max-width: 100%;
         align-self: center;
         position: relative;
     }
@@ -241,25 +241,25 @@ section {
 .about iframe{
     width: 100%;
     max-width: 62vw;
-    height: 60vh;
+    height: 33.5rem;
 }
 
 @media only screen and (max-width: 1000px) {
     .about iframe{
-        height: 40vh;
+        height: 25rem;
     }
 }
 
 @media only screen and (max-width: 980px) {
     .about iframe{
-        height: 30vh;
+        height: 20rem;
     }
 }
 
 @media only screen and (max-width: 580px) {
     .about iframe{
         max-width: 75vw;
-        height: 18vh;
+        height: 15rem;
     }
 }
 
