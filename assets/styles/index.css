@@ -18,15 +18,8 @@ header {
     -moz-box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
     box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
     font-size: 1em;
-    padding-block: 1rem;
+    padding-block: 2rem;
 }
-
-/* .nav__links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-} */
 
 nav {
     width: 100%;
@@ -56,14 +49,7 @@ nav ul li a{
 .checkbtn{
     font-size: 30px;
     color: var(--primary-dark);
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
     cursor: pointer;
-    display: none;
-}
-
-#check{
     display: none;
 }
 
@@ -96,7 +82,8 @@ nav ul li a{
     nav ul li a{
         font-size: 20px;
     }
-    #check:checked ~ ul{
+
+    .toggleMenu{
         left: 0;
     }
 }
@@ -105,28 +92,6 @@ nav ul li a{
     font-size: 1.2em;
     float: left;
 }
-
-.toggleMenu{
-    left: 0;
-}
-
-/* .logo span {
-    font-family: var(--secondary-font);
-    font-size: .8em;
-} */
-
-/* 
-.nav__links li {
-    display: inline-block;
-}
-
-.nav__links li a {
-    transition: all .3s ease;
-}
-
-.nav__links li a:hover {
-    color: var(--primary-light);
-} */
 
 nav a:hover{
     color: var(--primary-dark);
@@ -185,7 +150,7 @@ section {
 }
 
 .content {
-    max-width: 50%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -199,25 +164,34 @@ section {
 
 .home .hero-img {
     max-width: 40%;
+    align-self: flex-end;
 }
 
 @media only screen and (max-width: 1300px) {
     #home{
         margin: 0 2rem;
     }
+
+    .content{
+        max-width: 100%;
+    }
+
+    .content h1 {
+        font-size: 2.8em;
+    }
 }
 
 @media only screen and (max-width: 900px) {
     .home {
-        flex-direction: column;
+        min-height: 82vh;
+        flex-direction: column-reverse;
         justify-content: center;
-        height: 80%;
     }
 
     .content {
         width: 100%;
         text-align: center;
-        margin: 0 auto;
+        align-items: center;
     }
 
     .content h1 {
@@ -226,6 +200,17 @@ section {
 
     .home .hero-img {
         max-width: 50%;
+        align-self: center;
+        position: relative;
+    }
+
+    .home .hero-img::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: .6vh;
+        background-color: #BD7725;
+        bottom: 0;
     }
 }
 
@@ -240,7 +225,6 @@ section {
 }
 
 .about img {
-    /* height: 20rem; */
     width: 75%;
     height: auto;
 }
@@ -254,39 +238,29 @@ section {
     width: 75%;
 }
 
-/* @media only screen and (max-width: 1090px) {
-    .about-img {
-        width: 75%;
+.about iframe{
+    width: 100%;
+    max-width: 62vw;
+    height: 60vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .about iframe{
+        height: 40vh;
     }
 }
 
-@media only screen and (max-width: 576px) {
-    .about-img {
-        width: 40rem;
+@media only screen and (max-width: 980px) {
+    .about iframe{
+        height: 30vh;
     }
-} */
-
-.video-container{
-    position: relative;
-    overflow: hidden;
-    max-width: 60rem;
-    min-height: 50vh;
-    height: 80%;
-    width: 100%;
-    z-index: 0;
-    padding: 56.25% 0 0 0;
-    margin: 2rem;
 }
 
-.responsive-iframe{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
+@media only screen and (max-width: 580px) {
+    .about iframe{
+        max-width: 75vw;
+        height: 18vh;
+    }
 }
 
 /* Services */
@@ -363,7 +337,7 @@ section {
 
 form {
     width: 100%;
-    max-width: 50%;
+    max-width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -416,12 +390,6 @@ textarea::placeholder {
     form {
         max-width: 80%;
         font-size: 1em;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    form {
-        /* width: 20rem; */
     }
 }
 
