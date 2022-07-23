@@ -8,6 +8,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
     transition: 0.3s;
 }
 
@@ -17,7 +18,7 @@ header {
     -moz-box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
     box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
     font-size: 1em;
-    padding-block: 2rem;
+    padding-block: 1rem;
 }
 
 /* .nav__links {
@@ -30,6 +31,9 @@ header {
 nav {
     width: 100%;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -64,10 +68,6 @@ nav ul li a{
 }
 
 @media (max-width: 952px){
-    label.logo1{
-        font-size: 30px;
-        padding-left: 50px;
-    }
     nav ul li a{
         font-size: 16px;
     }
@@ -80,7 +80,7 @@ nav ul li a{
     .checkbtn{
         display: block;
     }
-    ul{
+    nav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -102,18 +102,18 @@ nav ul li a{
 }
 
 .logo {
-    float: left;
     font-size: 1.2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    float: left;
 }
 
-.logo span {
+.toggleMenu{
+    left: 0;
+}
+
+/* .logo span {
     font-family: var(--secondary-font);
     font-size: .8em;
-}
+} */
 
 /* 
 .nav__links li {
@@ -143,6 +143,10 @@ section {
 }
 
 /* Home */
+#home{
+    margin-top: -100px;
+}
+
 .home {
     display: flex;
     justify-content: space-between;
@@ -197,14 +201,23 @@ section {
     max-width: 40%;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1300px) {
+    #home{
+        margin: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
     .home {
         flex-direction: column;
         justify-content: center;
+        height: 80%;
     }
 
     .content {
-        max-width: 80%;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .content h1 {
@@ -212,7 +225,7 @@ section {
     }
 
     .home .hero-img {
-        display: none;
+        max-width: 50%;
     }
 }
 
@@ -227,7 +240,9 @@ section {
 }
 
 .about img {
-    height: 20rem;
+    /* height: 20rem; */
+    width: 75%;
+    height: auto;
 }
 
 .about p {
@@ -239,7 +254,7 @@ section {
     width: 75%;
 }
 
-@media only screen and (max-width: 1090px) {
+/* @media only screen and (max-width: 1090px) {
     .about-img {
         width: 75%;
     }
@@ -249,6 +264,29 @@ section {
     .about-img {
         width: 40rem;
     }
+} */
+
+.video-container{
+    position: relative;
+    overflow: hidden;
+    max-width: 60rem;
+    min-height: 50vh;
+    height: 80%;
+    width: 100%;
+    z-index: 0;
+    padding: 56.25% 0 0 0;
+    margin: 2rem;
+}
+
+.responsive-iframe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
 }
 
 /* Services */
@@ -300,7 +338,7 @@ section {
 
 .pricing-container {
     display: flex;
-    width: 70%;
+    max-width: 70%;
     justify-content: center;
     -webkit-box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
     -moz-box-shadow: 0px 27px 100px rgba(189, 119, 37, 0.2);
@@ -309,9 +347,9 @@ section {
 }
 
 .pricing-text {
-    padding: 3rem 5rem;
+    padding: 3rem 3rem;
     font-weight: 600;
-    text-align: justify;
+    text-align: center;
 }
 
 /* Contact */
@@ -354,7 +392,7 @@ textarea::placeholder {
     color: var(--primary-dark);
 }
 
-input[type="button"] {
+.form-button{
     padding-block: 1rem;
     background-color: var(--primary-dark);
     color: var(--secondary-light);
@@ -365,9 +403,13 @@ input[type="button"] {
     cursor: pointer;
 }
 
-input[type="button"]:hover {
+.form-button:hover {
     background-color: var(--primary-light);
     border: 2px solid var(--primary-light);
+}
+
+.form-button:active{
+    background-color: var(--primary-light);
 }
 
 @media only screen and (max-width: 640px) {
@@ -491,6 +533,10 @@ footer a {
     gap: 0.6rem;
 }
 
+.app-contact i{
+    font-size: 1.5rem;
+}
+
 .row-2 {
     display: flex;
     justify-content: space-between;
@@ -550,4 +596,9 @@ footer a {
     .copy {
         margin: 1rem 0;
     }
+}
+
+.items{
+    list-style: none;
+    text-align: center;
 }
