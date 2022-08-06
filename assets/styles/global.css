@@ -1,8 +1,8 @@
 :root {
-    --primary-dark: #3D2407;
-    --primary-light: #BD7725;
-    --secondry-dark: #E4D1BA;
-    --secondary-light: #FFFAEE;
+    --primary-dark: #094650;
+    --primary-light: #128599;
+    --secondry-dark: #1ac5e2;
+    --secondary-light: #abeaf5;
 
     --primary-font: 'Pacifico', sans-serif;
     --secondary-font: 'Quicksand', sans-serif;
@@ -24,6 +24,30 @@
     color: var(--secondary-light);
     background: var(--primary-dark);
 }
+
+/* custom scroll bar */
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 0 0 5px var(--primary-light);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(var(--primary-dark), var(--primary-light));
+    border-radius: 10px;
+}
+
+:focus-visible {
+    border-radius: 5px;
+    border: 1px solid var(--secondry-dark);
+    outline-offset: 1px;
+    outline: 4px solid var(--secondary-light);
+}
+
 
 /* Set core root defaults */
 html:focus-within {
