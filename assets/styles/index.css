@@ -160,11 +160,11 @@ section {
 }
 
 .content h1 {
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 .home .hero-img {
-    max-width: 40%;
+    max-width: 30%;
     align-self: flex-end;
 }
 
@@ -274,7 +274,7 @@ section {
 }
 
 .service__card {
-    max-width: 20rem;
+    max-width: 16rem;
     padding: 1rem;
     align-items: flex-start;
 }
@@ -295,7 +295,6 @@ section {
 
 .pricing__card {
     max-width: 26rem;
-    justify-content: space-between;
     align-items: center;
     padding: 2rem;
 }

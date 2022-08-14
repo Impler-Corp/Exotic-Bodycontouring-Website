@@ -28,17 +28,17 @@
 /* custom scroll bar */
 /* Custom Scroll Bar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
     box-shadow: 0 0 5px var(--primary-light);
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(var(--primary-dark), var(--primary-light));
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 :focus-visible {
